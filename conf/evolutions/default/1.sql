@@ -8,7 +8,7 @@ CREATE TABLE task (
     label varchar(2000),
     who varchar(40),
     mytime varchar(20),
-    ready smallint(1)
+    ready smallint
 );
 
 # --- !Downs

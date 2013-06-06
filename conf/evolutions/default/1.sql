@@ -7,7 +7,8 @@ CREATE TABLE task (
     id integer NOT NULL DEFAULT nextval('task_id_seq'),
     label varchar(2000),
     who varchar(40),
-    mytime varchar(20)
+    mytime varchar(20),
+    ready integer
 );
 
 # --- !Downs

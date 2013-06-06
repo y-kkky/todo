@@ -5,7 +5,7 @@ import anorm.SqlParser._
 import play.api.db._
 import play.api.Play.current
 
-case class Task(id: Long, label: String, who: String, mytime: String, ready: Short)
+case class Task(id: Long, label: String, who: String, mytime: String, ready: Int)
 
 object Task {
 
@@ -44,7 +44,7 @@ object Task {
       get[String]("label") ~
       get[String]("who") ~
       get[String]("mytime") ~
-      get[Short]("ready") map {
+      get[Int]("ready") map {
       case id~label~who~mytime~ready => Task(id, label, who, mytime, ready)
     }
   }

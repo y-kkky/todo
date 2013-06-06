@@ -15,7 +15,7 @@ object Task {
 
   def create(label: String, who: String, mytime: String) {
     DB.withConnection { implicit c =>
-      SQL("insert into task (label,who,mytime,ready) values ({label},{who},{mytime}, 0)").on(
+      SQL("insert into task (label,who,mytime,ready) values ({label},{who},{mytime}, '0')").on(
         'label -> label,
         'who -> who,
         'mytime -> mytime

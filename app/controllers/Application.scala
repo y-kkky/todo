@@ -47,7 +47,6 @@ object Application extends Controller {
       "who" -> nonEmptyText))
   private def getTime(): String = {
     val today = Calendar.getInstance().getTimeInMillis()
-    val slow = Calend.ge
     val timeFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss")
     val time = timeFormat.format(today)
     time
